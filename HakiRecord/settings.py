@@ -57,7 +57,7 @@ ROOT_URLCONF = 'HakiRecord.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'HakiRecordApp', 'Templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
