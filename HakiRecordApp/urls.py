@@ -21,6 +21,7 @@ path('logout/', views.logout_view, name='logout'),
 
     path('contact', views.contact, name='contact'),
 
+
     path('evidence/', views.evidence_vault, name='evidence_vault'),
 ]
 if settings.DEBUG:

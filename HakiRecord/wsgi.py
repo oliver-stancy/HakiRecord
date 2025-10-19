@@ -7,15 +7,25 @@ For more information on this file, see
 https://docs.djangoproject.com/en/5.1/howto/deployment/wsgi/
 """
 
+
 import os
-
-print(f"PORT: {os.environ.get('PORT', 'Not set')}")
-
+import sys
 from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'HakiRecord.settings')
 
-application = get_wsgi_application()
+print("🚀 Starting Django on Render...")
+
+try:
+    application = get_wsgi_application()
+    print("✅ Django application loaded successfully.")
+except Exception as e:
+    print("💥 Django failed to start:")
+    import traceback
+    traceback.print_exc()
+    sys.stdout.flush()
+    raise
+
 
 
 
