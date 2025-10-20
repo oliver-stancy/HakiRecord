@@ -23,6 +23,8 @@ path('logout/', views.logout_view, name='logout'),
 
 
     path('evidence/', views.evidence_vault, name='evidence_vault'),
+
+    path('shift_allocation/', views.shift_allocation, name='shift_allocation'),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

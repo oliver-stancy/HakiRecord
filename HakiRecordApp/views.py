@@ -75,3 +75,6 @@ def contact(request):
 def evidence_vault(request):
     statements = Statement.objects.all().order_by('-id')
     return render(request, 'evidence.html',{"statements":statements})
+
+def shift_allocation(request):
+    return render(request, 'shift_allocation.html')

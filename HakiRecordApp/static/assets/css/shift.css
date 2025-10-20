@@ -1,0 +1,51 @@
+/* Shift Section Styling */
+.shift-section {
+  padding: 60px 0;
+  background-color: #f8f9fa;
+}
+
+.shift-section .section-header h2 {
+  font-weight: 700;
+  color: #0b9edd;
+}
+
+.shift-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  margin-bottom: 30px;
+}
+
+.shift-card:hover {
+  transform: translateY(-5px);
+}
+
+.officer-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #0b9edd;
+  margin-bottom: 15px;
+}
+
+.officer-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.service-number {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.shift-time {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color:#0b9edd;
+}
