@@ -1,9 +1,11 @@
+from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render,redirect
 from .models import Statement
 from django.contrib.admin.models import LogEntry
 from django.contrib.auth.models import User
+
 
 # Create your views here.
 def index(request):
@@ -53,6 +55,8 @@ def login_fn(request):
         if user is not None:
             login(request, user)
             return redirect('homepage')
+        else:
+            messages.error(request, 'Invalid service number or password. Please try again.')
 
     return render(request, 'login.html')
 
@@ -78,3 +82,7 @@ def evidence_vault(request):
 
 def shift_allocation(request):
     return render(request, 'shift_allocation.html')
+
+
+def login_success(request):
+    return render(request,'login_success.html')

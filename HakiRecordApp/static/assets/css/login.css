@@ -16,6 +16,16 @@
 
 }
 
+.login_error{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
+    font-weight:bold;
+    font-size: 20px;
+    margin-top:50px;
+}
+
 .login_form .texts {
     padding-top:50px;
 

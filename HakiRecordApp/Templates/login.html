@@ -9,7 +9,14 @@
 </head>
 <body>
 <div class="login">
-
+    <div class="container">
+<div class="login_error">
+   {% if messages %}
+  {% for message in messages %}
+    <div class="alert alert-danger">{{ message }}</div>
+  {% endfor %}
+{% endif %}
+</div>
 <form class="login_form" action="/login/" method="POST">
     {% csrf_token %}
         <img src="{% static 'assets/img/login_logo.png' %}" alt="" >
